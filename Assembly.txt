@@ -1,0 +1,16 @@
+//INITIALIZATION
+ADDI R0, 0      // Constant zero for comparisons
+ADDI R1, 0      // Accumulator (Sum = 0)
+ADDI R2, 30     // Pointer to array start (Hex 0x1E)
+ADDI R3, 10     // Loop counter (10 iterations)
+
+//LOOP START
+LOAD R4, 0      // R4 = Mem[R0 + R2] (Read current element)
+ADD  R1, R4     // Sum = Sum + R4
+ADDI R2, 1      // Move pointer to next element
+SUBI R3, 1      // Decrement loop counter
+BRANCHZ R3, 11  // If R3 == 0, skip JUMP to exit loop
+JUMP 4          // Repeat loop from address 4
+
+//FINALIZATION
+ADDR 11: 1200   STORE R1, 0     // Store final sum in memory address 0

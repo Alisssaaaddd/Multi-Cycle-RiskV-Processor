@@ -1,0 +1,25 @@
+// --- Instruction Segment (Start at address 0) ---
+C000 // ADDI R0, 0     - Set R0 as constant zero
+C200 // ADDI R1, 0     - Clear Sum register
+C41E // ADDI R2, 30    - Set R2 to array start address (0x1E = 30)
+C60A // ADDI R3, 10    - Set loop counter to 10
+0800 // LOAD R4, 0     - Load: R4 = Mem[R0 + R2]
+8004 // ADD R1, R4     - Sum = Sum + R4
+C401 // ADDI R2, 1     - Point to next element
+D601 // SUBI R3, 1     - Decrement counter
+460B // BRANCHZ R3, 11 - Exit if counter is 0
+2004 // JUMP 4         - Go back to LOAD
+1200 // STORE R1, 0    - Store result at address 0
+
+// --- Data Segment (Start at address 30 / 0x1E) ---
+@1E
+0001 // Array[0]
+0002 // Array[1]
+0003 // Array[2]
+0004 // Array[3]
+0005 // Array[4]
+0006 // Array[5]
+0007 // Array[6]
+0008 // Array[7]
+0009 // Array[8]
+000A // Array[9]

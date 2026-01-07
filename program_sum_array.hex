@@ -1,0 +1,39 @@
+// Sum 10-element array at addresses 0x64..0x6D into R2
+// 0: Initialize R2 = 0 (MoveTo R2 from R0)
+8401
+
+// Loop unrolled: for addr = 0x64 .. 0x6D
+0064
+8404
+C000
+0065
+8404
+C000
+0066
+8404
+C000
+0067
+8404
+C000
+0068
+8404
+C000
+0069
+8404
+C000
+006a
+8404
+C000
+006b
+8404
+C000
+006c
+8404
+C000
+006d
+8404
+C000
+
+// End: (optional) no-op
+0000
+0000

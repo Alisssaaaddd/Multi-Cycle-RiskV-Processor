@@ -1,0 +1,99 @@
+C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/ALUController.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/ALUController.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module alu_control
+
+Top level modules:
+	alu_control
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/DataPath.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/DataPath.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Datapath
+
+Top level modules:
+	Datapath
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Processor.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Processor.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Processor
+
+Top level modules:
+	Processor
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Memory.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Memory.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/MUX3to1.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/MUX3to1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux3to1
+
+Top level modules:
+	Mux3to1
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/MainController.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/MainController.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module main_control
+
+Top level modules:
+	main_control
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/tb_SystemTop.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/tb_SystemTop.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module tb_SystemTop
+
+Top level modules:
+	tb_SystemTop
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Register.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Register
+
+Top level modules:
+	Register
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/RegisterFile.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/RegisterFile.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RegisterFile
+
+Top level modules:
+	RegisterFile
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/SystemTop.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/SystemTop.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module System_Top
+
+Top level modules:
+	System_Top
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/MUX2to1.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/MUX2to1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux2to1
+
+Top level modules:
+	Mux2to1
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Extend.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/Extend.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module extend
+
+Top level modules:
+	extend
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/ControlUnit.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/ControlUnit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module control_unit
+
+Top level modules:
+	control_unit
+
+} {} {}} C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/ALU.v {1 {vlog -work work -stats=none C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/CA3/ALU.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}}

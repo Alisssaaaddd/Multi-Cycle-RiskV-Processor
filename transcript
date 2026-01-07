@@ -1,0 +1,1080 @@
+# Compile of ALU.v was successful.
+# Compile of ALUController.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of Extend.v was successful.
+# Compile of MainController.v was successful.
+# Compile of Memory.v was successful.
+# Compile of MUX2to1.v was successful.
+# Compile of MUX3to1.v was successful.
+# Compile of Processor.v was successful.
+# Compile of Register.v was successful.
+# Compile of RegisterFile.v was successful.
+# Compile of SystemTop.v was successful.
+# Compile of tb_SystemTop.v was successful.
+# Compile of Temp.v was successful.
+# 15 compiles, 0 failed with no errors.
+vsim -gui work.tb_SystemTop
+# vsim -gui work.tb_SystemTop 
+# Start time: 11:21:30 on Jan 07,2026
+# Loading work.tb_SystemTop
+# Loading work.System_Top
+# Loading work.Processor
+# Loading work.control_unit
+# Loading work.main_control
+# Loading work.alu_control
+# Loading work.Datapath
+# Loading work.Register
+# Loading work.Mux2to1
+# Loading work.RegisterFile
+# Loading work.extend
+# Loading work.Mux3to1
+# Loading work.ALU
+# Loading work.memory
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'MC'.  Expected 16, found 15.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_SystemTop/uut/CPU/CU/MC File: C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/Temp.v Line: 463
+# ** Warning: (vsim-3722) C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/Temp.v(463): [TFMPC] - Missing connection for port 'immsrc'.
+add wave -position insertpoint  \
+sim:/tb_SystemTop/clk \
+sim:/tb_SystemTop/rst \
+sim:/tb_SystemTop/i \
+sim:/tb_SystemTop/prev_state \
+sim:/tb_SystemTop/prev_pc \
+sim:/tb_SystemTop/r0_value \
+sim:/tb_SystemTop/r1_value \
+sim:/tb_SystemTop/r2_value \
+sim:/tb_SystemTop/r3_value \
+sim:/tb_SystemTop/r4_value \
+sim:/tb_SystemTop/r5_value \
+sim:/tb_SystemTop/r6_value \
+sim:/tb_SystemTop/r7_value \
+sim:/tb_SystemTop/current_state \
+sim:/tb_SystemTop/pc_value \
+sim:/tb_SystemTop/instruction \
+sim:/tb_SystemTop/alu_result_val \
+sim:/tb_SystemTop/result_bus \
+sim:/tb_SystemTop/accumulator_reg
+run -all
+# 5000: MC STATE change x -> 0
+# [CTRL] 5000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 5000: PC=0000 IR=0000
+# 5000: ADR=0000 MDR=0000 MEM_RD=xxxx
+# [CTRL] 15000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 15000: PC=0000 IR=0000
+# 15000: ADR=0000 MDR=0000 MEM_RD=xxxx
+# [TB] Loading program_sum_array.hex into memory (if available)
+# [TB] Initialized data array at 0x64..0x6d with values 1..10
+# [CTRL] 25000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 25000: PC=0000 IR=0000
+# 25000: ADR=0000 MDR=0000 MEM_RD=8401
+# 35000: MC STATE change 0 -> 8
+# 35000: PC update (pwrite=1) old=xxxx new=0000
+# [CTRL] 35000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 35000: PC=0000 IR=8401
+# 35000: ADR=0000 MDR=8401 MEM_RD=8401
+# 45000: MC STATE change 8 -> 1
+# [CTRL] 45000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 45000: PC=0001 IR=8401
+# 45000: ADR=0001 MDR=8401 MEM_RD=0064
+# 55000: MC STATE change 1 -> 2
+# [CTRL] 55000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 55000: PC=0001 IR=8401
+# 55000: ADR=0001 MDR=0064 MEM_RD=0064
+# 65000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 65000: MC STATE change 2 -> 5
+# [CTRL] 65000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 65000: PC=0001 IR=8401
+# 65000: ADR=0001 MDR=0064 MEM_RD=0064
+# 75000: MC STATE change 5 -> 0
+# [CTRL] 75000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 75000: PC=0001 IR=8401
+# 75000: ADR=0001 MDR=0064 MEM_RD=0064
+# 85000: MC STATE change 0 -> 8
+# 85000: PC update (pwrite=1) old=0000 new=0001
+# [CTRL] 85000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 85000: PC=0001 IR=0064
+# 85000: ADR=0001 MDR=0064 MEM_RD=0064
+# 95000: MC STATE change 8 -> 1
+# [CTRL] 95000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 95000: PC=0002 IR=0064
+# 95000: ADR=0002 MDR=0064 MEM_RD=8404
+# 105000: MC STATE change 1 -> 2
+# [CTRL] 105000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 105000: PC=0002 IR=0064
+# 105000: ADR=0002 MDR=8404 MEM_RD=8404
+# 115000: MC STATE change 2 -> 3
+# [CTRL] 115000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 115000: PC=0002 IR=0064
+# 115000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 125000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 125000: MC STATE change 3 -> 5
+# [CTRL] 125000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 125000: PC=0002 IR=0064
+# 125000: ADR=0002 MDR=xxxx MEM_RD=8404
+# 135000: MC STATE change 5 -> 0
+# [CTRL] 135000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 135000: PC=0002 IR=0064
+# 135000: ADR=0002 MDR=8404 MEM_RD=8404
+# 145000: MC STATE change 0 -> 8
+# 145000: PC update (pwrite=1) old=0001 new=0002
+# [CTRL] 145000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 145000: PC=0002 IR=8404
+# 145000: ADR=0002 MDR=8404 MEM_RD=8404
+# 155000: MC STATE change 8 -> 1
+# [CTRL] 155000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 155000: PC=0003 IR=8404
+# 155000: ADR=0003 MDR=8404 MEM_RD=c000
+# 165000: MC STATE change 1 -> 2
+# [CTRL] 165000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 165000: PC=0003 IR=8404
+# 165000: ADR=0003 MDR=c000 MEM_RD=c000
+# 175000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 175000: MC STATE change 2 -> 5
+# [CTRL] 175000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 175000: PC=0003 IR=8404
+# 175000: ADR=0003 MDR=c000 MEM_RD=c000
+# 185000: MC STATE change 5 -> 0
+# [CTRL] 185000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 185000: PC=0003 IR=8404
+# 185000: ADR=0003 MDR=c000 MEM_RD=c000
+# 195000: MC STATE change 0 -> 8
+# 195000: PC update (pwrite=1) old=0002 new=0003
+# [CTRL] 195000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 195000: PC=0003 IR=c000
+# 195000: ADR=0003 MDR=c000 MEM_RD=c000
+# 205000: MC STATE change 8 -> 1
+# [CTRL] 205000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 205000: PC=0004 IR=c000
+# 205000: ADR=0004 MDR=c000 MEM_RD=0065
+# 215000: MC STATE change 1 -> 2
+# [CTRL] 215000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 215000: PC=0004 IR=c000
+# 215000: ADR=0004 MDR=0065 MEM_RD=0065
+# 225000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 225000: MC STATE change 2 -> 5
+# [CTRL] 225000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 225000: PC=0004 IR=c000
+# 225000: ADR=0004 MDR=0065 MEM_RD=0065
+# 235000: MC STATE change 5 -> 0
+# [CTRL] 235000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 235000: PC=0004 IR=c000
+# 235000: ADR=0004 MDR=0065 MEM_RD=0065
+# 245000: MC STATE change 0 -> 8
+# 245000: PC update (pwrite=1) old=0003 new=0004
+# [CTRL] 245000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 245000: PC=0004 IR=0065
+# 245000: ADR=0004 MDR=0065 MEM_RD=0065
+# 255000: MC STATE change 8 -> 1
+# [CTRL] 255000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 255000: PC=0005 IR=0065
+# 255000: ADR=0005 MDR=0065 MEM_RD=8404
+# 265000: MC STATE change 1 -> 2
+# [CTRL] 265000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 265000: PC=0005 IR=0065
+# 265000: ADR=0005 MDR=8404 MEM_RD=8404
+# 275000: MC STATE change 2 -> 3
+# [CTRL] 275000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 275000: PC=0005 IR=0065
+# 275000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 285000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 285000: MC STATE change 3 -> 5
+# [CTRL] 285000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 285000: PC=0005 IR=0065
+# 285000: ADR=0005 MDR=xxxx MEM_RD=8404
+# 295000: MC STATE change 5 -> 0
+# [CTRL] 295000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 295000: PC=0005 IR=0065
+# 295000: ADR=0005 MDR=8404 MEM_RD=8404
+# 305000: MC STATE change 0 -> 8
+# 305000: PC update (pwrite=1) old=0004 new=0005
+# [CTRL] 305000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 305000: PC=0005 IR=8404
+# 305000: ADR=0005 MDR=8404 MEM_RD=8404
+# 315000: MC STATE change 8 -> 1
+# [CTRL] 315000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 315000: PC=0006 IR=8404
+# 315000: ADR=0006 MDR=8404 MEM_RD=c000
+# 325000: MC STATE change 1 -> 2
+# [CTRL] 325000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 325000: PC=0006 IR=8404
+# 325000: ADR=0006 MDR=c000 MEM_RD=c000
+# 335000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 335000: MC STATE change 2 -> 5
+# [CTRL] 335000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 335000: PC=0006 IR=8404
+# 335000: ADR=0006 MDR=c000 MEM_RD=c000
+# 345000: MC STATE change 5 -> 0
+# [CTRL] 345000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 345000: PC=0006 IR=8404
+# 345000: ADR=0006 MDR=c000 MEM_RD=c000
+# 355000: MC STATE change 0 -> 8
+# 355000: PC update (pwrite=1) old=0005 new=0006
+# [CTRL] 355000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 355000: PC=0006 IR=c000
+# 355000: ADR=0006 MDR=c000 MEM_RD=c000
+# 365000: MC STATE change 8 -> 1
+# [CTRL] 365000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 365000: PC=0007 IR=c000
+# 365000: ADR=0007 MDR=c000 MEM_RD=0066
+# 375000: MC STATE change 1 -> 2
+# [CTRL] 375000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 375000: PC=0007 IR=c000
+# 375000: ADR=0007 MDR=0066 MEM_RD=0066
+# 385000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 385000: MC STATE change 2 -> 5
+# [CTRL] 385000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 385000: PC=0007 IR=c000
+# 385000: ADR=0007 MDR=0066 MEM_RD=0066
+# 395000: MC STATE change 5 -> 0
+# [CTRL] 395000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 395000: PC=0007 IR=c000
+# 395000: ADR=0007 MDR=0066 MEM_RD=0066
+# 405000: MC STATE change 0 -> 8
+# 405000: PC update (pwrite=1) old=0006 new=0007
+# [CTRL] 405000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 405000: PC=0007 IR=0066
+# 405000: ADR=0007 MDR=0066 MEM_RD=0066
+# 415000: MC STATE change 8 -> 1
+# [CTRL] 415000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 415000: PC=0008 IR=0066
+# 415000: ADR=0008 MDR=0066 MEM_RD=8404
+# 425000: MC STATE change 1 -> 2
+# [CTRL] 425000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 425000: PC=0008 IR=0066
+# 425000: ADR=0008 MDR=8404 MEM_RD=8404
+# 435000: MC STATE change 2 -> 3
+# [CTRL] 435000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 435000: PC=0008 IR=0066
+# 435000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 445000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 445000: MC STATE change 3 -> 5
+# [CTRL] 445000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 445000: PC=0008 IR=0066
+# 445000: ADR=0008 MDR=xxxx MEM_RD=8404
+# 455000: MC STATE change 5 -> 0
+# [CTRL] 455000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 455000: PC=0008 IR=0066
+# 455000: ADR=0008 MDR=8404 MEM_RD=8404
+# 465000: MC STATE change 0 -> 8
+# 465000: PC update (pwrite=1) old=0007 new=0008
+# [CTRL] 465000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 465000: PC=0008 IR=8404
+# 465000: ADR=0008 MDR=8404 MEM_RD=8404
+# 475000: MC STATE change 8 -> 1
+# [CTRL] 475000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 475000: PC=0009 IR=8404
+# 475000: ADR=0009 MDR=8404 MEM_RD=c000
+# 485000: MC STATE change 1 -> 2
+# [CTRL] 485000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 485000: PC=0009 IR=8404
+# 485000: ADR=0009 MDR=c000 MEM_RD=c000
+# 495000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 495000: MC STATE change 2 -> 5
+# [CTRL] 495000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 495000: PC=0009 IR=8404
+# 495000: ADR=0009 MDR=c000 MEM_RD=c000
+# 505000: MC STATE change 5 -> 0
+# [CTRL] 505000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 505000: PC=0009 IR=8404
+# 505000: ADR=0009 MDR=c000 MEM_RD=c000
+# 515000: MC STATE change 0 -> 8
+# 515000: PC update (pwrite=1) old=0008 new=0009
+# [CTRL] 515000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 515000: PC=0009 IR=c000
+# 515000: ADR=0009 MDR=c000 MEM_RD=c000
+# 525000: MC STATE change 8 -> 1
+# [CTRL] 525000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 525000: PC=000a IR=c000
+# 525000: ADR=000a MDR=c000 MEM_RD=0067
+# 535000: MC STATE change 1 -> 2
+# [CTRL] 535000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 535000: PC=000a IR=c000
+# 535000: ADR=000a MDR=0067 MEM_RD=0067
+# 545000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 545000: MC STATE change 2 -> 5
+# [CTRL] 545000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 545000: PC=000a IR=c000
+# 545000: ADR=000a MDR=0067 MEM_RD=0067
+# 555000: MC STATE change 5 -> 0
+# [CTRL] 555000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 555000: PC=000a IR=c000
+# 555000: ADR=000a MDR=0067 MEM_RD=0067
+# 565000: MC STATE change 0 -> 8
+# 565000: PC update (pwrite=1) old=0009 new=000a
+# [CTRL] 565000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 565000: PC=000a IR=0067
+# 565000: ADR=000a MDR=0067 MEM_RD=0067
+# 575000: MC STATE change 8 -> 1
+# [CTRL] 575000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 575000: PC=000b IR=0067
+# 575000: ADR=000b MDR=0067 MEM_RD=8404
+# 585000: MC STATE change 1 -> 2
+# [CTRL] 585000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 585000: PC=000b IR=0067
+# 585000: ADR=000b MDR=8404 MEM_RD=8404
+# 595000: MC STATE change 2 -> 3
+# [CTRL] 595000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 595000: PC=000b IR=0067
+# 595000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 605000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 605000: MC STATE change 3 -> 5
+# [CTRL] 605000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 605000: PC=000b IR=0067
+# 605000: ADR=000b MDR=xxxx MEM_RD=8404
+# 615000: MC STATE change 5 -> 0
+# [CTRL] 615000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 615000: PC=000b IR=0067
+# 615000: ADR=000b MDR=8404 MEM_RD=8404
+# 625000: MC STATE change 0 -> 8
+# 625000: PC update (pwrite=1) old=000a new=000b
+# [CTRL] 625000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 625000: PC=000b IR=8404
+# 625000: ADR=000b MDR=8404 MEM_RD=8404
+# 635000: MC STATE change 8 -> 1
+# [CTRL] 635000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 635000: PC=000c IR=8404
+# 635000: ADR=000c MDR=8404 MEM_RD=c000
+# 645000: MC STATE change 1 -> 2
+# [CTRL] 645000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 645000: PC=000c IR=8404
+# 645000: ADR=000c MDR=c000 MEM_RD=c000
+# 655000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 655000: MC STATE change 2 -> 5
+# [CTRL] 655000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 655000: PC=000c IR=8404
+# 655000: ADR=000c MDR=c000 MEM_RD=c000
+# 665000: MC STATE change 5 -> 0
+# [CTRL] 665000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 665000: PC=000c IR=8404
+# 665000: ADR=000c MDR=c000 MEM_RD=c000
+# 675000: MC STATE change 0 -> 8
+# 675000: PC update (pwrite=1) old=000b new=000c
+# [CTRL] 675000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 675000: PC=000c IR=c000
+# 675000: ADR=000c MDR=c000 MEM_RD=c000
+# 685000: MC STATE change 8 -> 1
+# [CTRL] 685000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 685000: PC=000d IR=c000
+# 685000: ADR=000d MDR=c000 MEM_RD=0068
+# 695000: MC STATE change 1 -> 2
+# [CTRL] 695000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 695000: PC=000d IR=c000
+# 695000: ADR=000d MDR=0068 MEM_RD=0068
+# 705000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 705000: MC STATE change 2 -> 5
+# [CTRL] 705000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 705000: PC=000d IR=c000
+# 705000: ADR=000d MDR=0068 MEM_RD=0068
+# 715000: MC STATE change 5 -> 0
+# [CTRL] 715000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 715000: PC=000d IR=c000
+# 715000: ADR=000d MDR=0068 MEM_RD=0068
+# 725000: MC STATE change 0 -> 8
+# 725000: PC update (pwrite=1) old=000c new=000d
+# [CTRL] 725000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 725000: PC=000d IR=0068
+# 725000: ADR=000d MDR=0068 MEM_RD=0068
+# 735000: MC STATE change 8 -> 1
+# [CTRL] 735000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 735000: PC=000e IR=0068
+# 735000: ADR=000e MDR=0068 MEM_RD=8404
+# 745000: MC STATE change 1 -> 2
+# [CTRL] 745000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 745000: PC=000e IR=0068
+# 745000: ADR=000e MDR=8404 MEM_RD=8404
+# 755000: MC STATE change 2 -> 3
+# [CTRL] 755000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 755000: PC=000e IR=0068
+# 755000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 765000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 765000: MC STATE change 3 -> 5
+# [CTRL] 765000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 765000: PC=000e IR=0068
+# 765000: ADR=000e MDR=xxxx MEM_RD=8404
+# 775000: MC STATE change 5 -> 0
+# [CTRL] 775000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 775000: PC=000e IR=0068
+# 775000: ADR=000e MDR=8404 MEM_RD=8404
+# 785000: MC STATE change 0 -> 8
+# 785000: PC update (pwrite=1) old=000d new=000e
+# [CTRL] 785000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 785000: PC=000e IR=8404
+# 785000: ADR=000e MDR=8404 MEM_RD=8404
+# 795000: MC STATE change 8 -> 1
+# [CTRL] 795000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 795000: PC=000f IR=8404
+# 795000: ADR=000f MDR=8404 MEM_RD=c000
+# 805000: MC STATE change 1 -> 2
+# [CTRL] 805000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 805000: PC=000f IR=8404
+# 805000: ADR=000f MDR=c000 MEM_RD=c000
+# 815000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 815000: MC STATE change 2 -> 5
+# [CTRL] 815000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 815000: PC=000f IR=8404
+# 815000: ADR=000f MDR=c000 MEM_RD=c000
+# 825000: MC STATE change 5 -> 0
+# [CTRL] 825000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 825000: PC=000f IR=8404
+# 825000: ADR=000f MDR=c000 MEM_RD=c000
+# 835000: MC STATE change 0 -> 8
+# 835000: PC update (pwrite=1) old=000e new=000f
+# [CTRL] 835000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 835000: PC=000f IR=c000
+# 835000: ADR=000f MDR=c000 MEM_RD=c000
+# 845000: MC STATE change 8 -> 1
+# [CTRL] 845000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 845000: PC=0010 IR=c000
+# 845000: ADR=0010 MDR=c000 MEM_RD=0069
+# 855000: MC STATE change 1 -> 2
+# [CTRL] 855000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 855000: PC=0010 IR=c000
+# 855000: ADR=0010 MDR=0069 MEM_RD=0069
+# 865000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 865000: MC STATE change 2 -> 5
+# [CTRL] 865000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 865000: PC=0010 IR=c000
+# 865000: ADR=0010 MDR=0069 MEM_RD=0069
+# 875000: MC STATE change 5 -> 0
+# [CTRL] 875000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 875000: PC=0010 IR=c000
+# 875000: ADR=0010 MDR=0069 MEM_RD=0069
+# 885000: MC STATE change 0 -> 8
+# 885000: PC update (pwrite=1) old=000f new=0010
+# [CTRL] 885000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 885000: PC=0010 IR=0069
+# 885000: ADR=0010 MDR=0069 MEM_RD=0069
+# 895000: MC STATE change 8 -> 1
+# [CTRL] 895000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 895000: PC=0011 IR=0069
+# 895000: ADR=0011 MDR=0069 MEM_RD=8404
+# 905000: MC STATE change 1 -> 2
+# [CTRL] 905000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 905000: PC=0011 IR=0069
+# 905000: ADR=0011 MDR=8404 MEM_RD=8404
+# 915000: MC STATE change 2 -> 3
+# [CTRL] 915000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 915000: PC=0011 IR=0069
+# 915000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 925000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 925000: MC STATE change 3 -> 5
+# [CTRL] 925000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 925000: PC=0011 IR=0069
+# 925000: ADR=0011 MDR=xxxx MEM_RD=8404
+# 935000: MC STATE change 5 -> 0
+# [CTRL] 935000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 935000: PC=0011 IR=0069
+# 935000: ADR=0011 MDR=8404 MEM_RD=8404
+# 945000: MC STATE change 0 -> 8
+# 945000: PC update (pwrite=1) old=0010 new=0011
+# [CTRL] 945000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 945000: PC=0011 IR=8404
+# 945000: ADR=0011 MDR=8404 MEM_RD=8404
+# 955000: MC STATE change 8 -> 1
+# [CTRL] 955000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 955000: PC=0012 IR=8404
+# 955000: ADR=0012 MDR=8404 MEM_RD=c000
+# 965000: MC STATE change 1 -> 2
+# [CTRL] 965000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 965000: PC=0012 IR=8404
+# 965000: ADR=0012 MDR=c000 MEM_RD=c000
+# 975000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 975000: MC STATE change 2 -> 5
+# [CTRL] 975000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 975000: PC=0012 IR=8404
+# 975000: ADR=0012 MDR=c000 MEM_RD=c000
+# 985000: MC STATE change 5 -> 0
+# [CTRL] 985000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 985000: PC=0012 IR=8404
+# 985000: ADR=0012 MDR=c000 MEM_RD=c000
+# 995000: MC STATE change 0 -> 8
+# 995000: PC update (pwrite=1) old=0011 new=0012
+# [CTRL] 995000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 995000: PC=0012 IR=c000
+# 995000: ADR=0012 MDR=c000 MEM_RD=c000
+# 1005000: MC STATE change 8 -> 1
+# [CTRL] 1005000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1005000: PC=0013 IR=c000
+# 1005000: ADR=0013 MDR=c000 MEM_RD=006a
+# 1015000: MC STATE change 1 -> 2
+# [CTRL] 1015000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1015000: PC=0013 IR=c000
+# 1015000: ADR=0013 MDR=006a MEM_RD=006a
+# 1025000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1025000: MC STATE change 2 -> 5
+# [CTRL] 1025000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1025000: PC=0013 IR=c000
+# 1025000: ADR=0013 MDR=006a MEM_RD=006a
+# 1035000: MC STATE change 5 -> 0
+# [CTRL] 1035000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1035000: PC=0013 IR=c000
+# 1035000: ADR=0013 MDR=006a MEM_RD=006a
+# 1045000: MC STATE change 0 -> 8
+# 1045000: PC update (pwrite=1) old=0012 new=0013
+# [CTRL] 1045000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1045000: PC=0013 IR=006a
+# 1045000: ADR=0013 MDR=006a MEM_RD=006a
+# 1055000: MC STATE change 8 -> 1
+# [CTRL] 1055000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1055000: PC=0014 IR=006a
+# 1055000: ADR=0014 MDR=006a MEM_RD=8404
+# 1065000: MC STATE change 1 -> 2
+# [CTRL] 1065000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1065000: PC=0014 IR=006a
+# 1065000: ADR=0014 MDR=8404 MEM_RD=8404
+# 1075000: MC STATE change 2 -> 3
+# [CTRL] 1075000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1075000: PC=0014 IR=006a
+# 1075000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 1085000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1085000: MC STATE change 3 -> 5
+# [CTRL] 1085000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1085000: PC=0014 IR=006a
+# 1085000: ADR=0014 MDR=xxxx MEM_RD=8404
+# 1095000: MC STATE change 5 -> 0
+# [CTRL] 1095000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1095000: PC=0014 IR=006a
+# 1095000: ADR=0014 MDR=8404 MEM_RD=8404
+# 1105000: MC STATE change 0 -> 8
+# 1105000: PC update (pwrite=1) old=0013 new=0014
+# [CTRL] 1105000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1105000: PC=0014 IR=8404
+# 1105000: ADR=0014 MDR=8404 MEM_RD=8404
+# 1115000: MC STATE change 8 -> 1
+# [CTRL] 1115000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1115000: PC=0015 IR=8404
+# 1115000: ADR=0015 MDR=8404 MEM_RD=c000
+# 1125000: MC STATE change 1 -> 2
+# [CTRL] 1125000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1125000: PC=0015 IR=8404
+# 1125000: ADR=0015 MDR=c000 MEM_RD=c000
+# 1135000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 1135000: MC STATE change 2 -> 5
+# [CTRL] 1135000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1135000: PC=0015 IR=8404
+# 1135000: ADR=0015 MDR=c000 MEM_RD=c000
+# 1145000: MC STATE change 5 -> 0
+# [CTRL] 1145000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1145000: PC=0015 IR=8404
+# 1145000: ADR=0015 MDR=c000 MEM_RD=c000
+# 1155000: MC STATE change 0 -> 8
+# 1155000: PC update (pwrite=1) old=0014 new=0015
+# [CTRL] 1155000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1155000: PC=0015 IR=c000
+# 1155000: ADR=0015 MDR=c000 MEM_RD=c000
+# 1165000: MC STATE change 8 -> 1
+# [CTRL] 1165000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1165000: PC=0016 IR=c000
+# 1165000: ADR=0016 MDR=c000 MEM_RD=006b
+# 1175000: MC STATE change 1 -> 2
+# [CTRL] 1175000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1175000: PC=0016 IR=c000
+# 1175000: ADR=0016 MDR=006b MEM_RD=006b
+# 1185000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1185000: MC STATE change 2 -> 5
+# [CTRL] 1185000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1185000: PC=0016 IR=c000
+# 1185000: ADR=0016 MDR=006b MEM_RD=006b
+# 1195000: MC STATE change 5 -> 0
+# [CTRL] 1195000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1195000: PC=0016 IR=c000
+# 1195000: ADR=0016 MDR=006b MEM_RD=006b
+# 1205000: MC STATE change 0 -> 8
+# 1205000: PC update (pwrite=1) old=0015 new=0016
+# [CTRL] 1205000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1205000: PC=0016 IR=006b
+# 1205000: ADR=0016 MDR=006b MEM_RD=006b
+# 1215000: MC STATE change 8 -> 1
+# [CTRL] 1215000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1215000: PC=0017 IR=006b
+# 1215000: ADR=0017 MDR=006b MEM_RD=8404
+# 1225000: MC STATE change 1 -> 2
+# [CTRL] 1225000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1225000: PC=0017 IR=006b
+# 1225000: ADR=0017 MDR=8404 MEM_RD=8404
+# 1235000: MC STATE change 2 -> 3
+# [CTRL] 1235000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1235000: PC=0017 IR=006b
+# 1235000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 1245000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1245000: MC STATE change 3 -> 5
+# [CTRL] 1245000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1245000: PC=0017 IR=006b
+# 1245000: ADR=0017 MDR=xxxx MEM_RD=8404
+# 1255000: MC STATE change 5 -> 0
+# [CTRL] 1255000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1255000: PC=0017 IR=006b
+# 1255000: ADR=0017 MDR=8404 MEM_RD=8404
+# 1265000: MC STATE change 0 -> 8
+# 1265000: PC update (pwrite=1) old=0016 new=0017
+# [CTRL] 1265000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1265000: PC=0017 IR=8404
+# 1265000: ADR=0017 MDR=8404 MEM_RD=8404
+# 1275000: MC STATE change 8 -> 1
+# [CTRL] 1275000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1275000: PC=0018 IR=8404
+# 1275000: ADR=0018 MDR=8404 MEM_RD=c000
+# 1285000: MC STATE change 1 -> 2
+# [CTRL] 1285000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1285000: PC=0018 IR=8404
+# 1285000: ADR=0018 MDR=c000 MEM_RD=c000
+# 1295000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 1295000: MC STATE change 2 -> 5
+# [CTRL] 1295000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1295000: PC=0018 IR=8404
+# 1295000: ADR=0018 MDR=c000 MEM_RD=c000
+# 1305000: MC STATE change 5 -> 0
+# [CTRL] 1305000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1305000: PC=0018 IR=8404
+# 1305000: ADR=0018 MDR=c000 MEM_RD=c000
+# 1315000: MC STATE change 0 -> 8
+# 1315000: PC update (pwrite=1) old=0017 new=0018
+# [CTRL] 1315000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1315000: PC=0018 IR=c000
+# 1315000: ADR=0018 MDR=c000 MEM_RD=c000
+# 1325000: MC STATE change 8 -> 1
+# [CTRL] 1325000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1325000: PC=0019 IR=c000
+# 1325000: ADR=0019 MDR=c000 MEM_RD=006c
+# 1335000: MC STATE change 1 -> 2
+# [CTRL] 1335000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1335000: PC=0019 IR=c000
+# 1335000: ADR=0019 MDR=006c MEM_RD=006c
+# 1345000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1345000: MC STATE change 2 -> 5
+# [CTRL] 1345000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1345000: PC=0019 IR=c000
+# 1345000: ADR=0019 MDR=006c MEM_RD=006c
+# 1355000: MC STATE change 5 -> 0
+# [CTRL] 1355000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1355000: PC=0019 IR=c000
+# 1355000: ADR=0019 MDR=006c MEM_RD=006c
+# 1365000: MC STATE change 0 -> 8
+# 1365000: PC update (pwrite=1) old=0018 new=0019
+# [CTRL] 1365000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1365000: PC=0019 IR=006c
+# 1365000: ADR=0019 MDR=006c MEM_RD=006c
+# 1375000: MC STATE change 8 -> 1
+# [CTRL] 1375000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1375000: PC=001a IR=006c
+# 1375000: ADR=001a MDR=006c MEM_RD=8404
+# 1385000: MC STATE change 1 -> 2
+# [CTRL] 1385000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1385000: PC=001a IR=006c
+# 1385000: ADR=001a MDR=8404 MEM_RD=8404
+# 1395000: MC STATE change 2 -> 3
+# [CTRL] 1395000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1395000: PC=001a IR=006c
+# 1395000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 1405000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1405000: MC STATE change 3 -> 5
+# [CTRL] 1405000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1405000: PC=001a IR=006c
+# 1405000: ADR=001a MDR=xxxx MEM_RD=8404
+# 1415000: MC STATE change 5 -> 0
+# [CTRL] 1415000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1415000: PC=001a IR=006c
+# 1415000: ADR=001a MDR=8404 MEM_RD=8404
+# 1425000: MC STATE change 0 -> 8
+# 1425000: PC update (pwrite=1) old=0019 new=001a
+# [CTRL] 1425000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1425000: PC=001a IR=8404
+# 1425000: ADR=001a MDR=8404 MEM_RD=8404
+# 1435000: MC STATE change 8 -> 1
+# [CTRL] 1435000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1435000: PC=001b IR=8404
+# 1435000: ADR=001b MDR=8404 MEM_RD=c000
+# 1445000: MC STATE change 1 -> 2
+# [CTRL] 1445000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1445000: PC=001b IR=8404
+# 1445000: ADR=001b MDR=c000 MEM_RD=c000
+# 1455000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 1455000: MC STATE change 2 -> 5
+# [CTRL] 1455000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1455000: PC=001b IR=8404
+# 1455000: ADR=001b MDR=c000 MEM_RD=c000
+# 1465000: MC STATE change 5 -> 0
+# [CTRL] 1465000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1465000: PC=001b IR=8404
+# 1465000: ADR=001b MDR=c000 MEM_RD=c000
+# 1475000: MC STATE change 0 -> 8
+# 1475000: PC update (pwrite=1) old=001a new=001b
+# [CTRL] 1475000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1475000: PC=001b IR=c000
+# 1475000: ADR=001b MDR=c000 MEM_RD=c000
+# 1485000: MC STATE change 8 -> 1
+# [CTRL] 1485000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1485000: PC=001c IR=c000
+# 1485000: ADR=001c MDR=c000 MEM_RD=006d
+# 1495000: MC STATE change 1 -> 2
+# [CTRL] 1495000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1495000: PC=001c IR=c000
+# 1495000: ADR=001c MDR=006d MEM_RD=006d
+# 1505000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1505000: MC STATE change 2 -> 5
+# [CTRL] 1505000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1505000: PC=001c IR=c000
+# 1505000: ADR=001c MDR=006d MEM_RD=006d
+# 1515000: MC STATE change 5 -> 0
+# [CTRL] 1515000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1515000: PC=001c IR=c000
+# 1515000: ADR=001c MDR=006d MEM_RD=006d
+# 1525000: MC STATE change 0 -> 8
+# 1525000: PC update (pwrite=1) old=001b new=001c
+# [CTRL] 1525000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1525000: PC=001c IR=006d
+# 1525000: ADR=001c MDR=006d MEM_RD=006d
+# 1535000: MC STATE change 8 -> 1
+# [CTRL] 1535000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1535000: PC=001d IR=006d
+# 1535000: ADR=001d MDR=006d MEM_RD=8404
+# 1545000: MC STATE change 1 -> 2
+# [CTRL] 1545000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1545000: PC=001d IR=006d
+# 1545000: ADR=001d MDR=8404 MEM_RD=8404
+# 1555000: MC STATE change 2 -> 3
+# [CTRL] 1555000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1555000: PC=001d IR=006d
+# 1555000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 1565000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1565000: MC STATE change 3 -> 5
+# [CTRL] 1565000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1565000: PC=001d IR=006d
+# 1565000: ADR=001d MDR=xxxx MEM_RD=8404
+# 1575000: MC STATE change 5 -> 0
+# [CTRL] 1575000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1575000: PC=001d IR=006d
+# 1575000: ADR=001d MDR=8404 MEM_RD=8404
+# 1585000: MC STATE change 0 -> 8
+# 1585000: PC update (pwrite=1) old=001c new=001d
+# [CTRL] 1585000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1585000: PC=001d IR=8404
+# 1585000: ADR=001d MDR=8404 MEM_RD=8404
+# 1595000: MC STATE change 8 -> 1
+# [CTRL] 1595000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1595000: PC=001e IR=8404
+# 1595000: ADR=001e MDR=8404 MEM_RD=c000
+# 1605000: MC STATE change 1 -> 2
+# [CTRL] 1605000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1605000: PC=001e IR=8404
+# 1605000: ADR=001e MDR=c000 MEM_RD=c000
+# 1615000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 1615000: MC STATE change 2 -> 5
+# [CTRL] 1615000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1615000: PC=001e IR=8404
+# 1615000: ADR=001e MDR=c000 MEM_RD=c000
+# 1625000: MC STATE change 5 -> 0
+# [CTRL] 1625000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1625000: PC=001e IR=8404
+# 1625000: ADR=001e MDR=c000 MEM_RD=c000
+# 1635000: MC STATE change 0 -> 8
+# 1635000: PC update (pwrite=1) old=001d new=001e
+# [CTRL] 1635000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1635000: PC=001e IR=c000
+# 1635000: ADR=001e MDR=c000 MEM_RD=c000
+# 1645000: MC STATE change 8 -> 1
+# [CTRL] 1645000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1645000: PC=001f IR=c000
+# 1645000: ADR=001f MDR=c000 MEM_RD=0000
+# 1655000: MC STATE change 1 -> 2
+# [CTRL] 1655000 opcode=1100 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1655000: PC=001f IR=c000
+# 1655000: ADR=001f MDR=0000 MEM_RD=0000
+# 1665000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1665000: MC STATE change 2 -> 5
+# [CTRL] 1665000 opcode=1100 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1665000: PC=001f IR=c000
+# 1665000: ADR=001f MDR=0000 MEM_RD=0000
+# 1675000: MC STATE change 5 -> 0
+# [CTRL] 1675000 opcode=1100 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1675000: PC=001f IR=c000
+# 1675000: ADR=001f MDR=0000 MEM_RD=0000
+# 1685000: MC STATE change 0 -> 8
+# 1685000: PC update (pwrite=1) old=001e new=001f
+# [CTRL] 1685000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1685000: PC=001f IR=0000
+# 1685000: ADR=001f MDR=0000 MEM_RD=0000
+# 1695000: MC STATE change 8 -> 1
+# [CTRL] 1695000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1695000: PC=0020 IR=0000
+# 1695000: ADR=0020 MDR=0000 MEM_RD=0000
+# 1705000: MC STATE change 1 -> 2
+# [CTRL] 1705000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1705000: PC=0020 IR=0000
+# 1705000: ADR=0020 MDR=0000 MEM_RD=0000
+# 1715000: MC STATE change 2 -> 3
+# [CTRL] 1715000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1715000: PC=0020 IR=0000
+# 1715000: ADR=xxxx MDR=0000 MEM_RD=xxxx
+# 1725000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1725000: MC STATE change 3 -> 5
+# [CTRL] 1725000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1725000: PC=0020 IR=0000
+# 1725000: ADR=0020 MDR=xxxx MEM_RD=0000
+# 1735000: MC STATE change 5 -> 0
+# [CTRL] 1735000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1735000: PC=0020 IR=0000
+# 1735000: ADR=0020 MDR=0000 MEM_RD=0000
+# 1745000: MC STATE change 0 -> 8
+# 1745000: PC update (pwrite=1) old=001f new=0020
+# [CTRL] 1745000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1745000: PC=0020 IR=0000
+# 1745000: ADR=0020 MDR=0000 MEM_RD=0000
+# 1755000: MC STATE change 8 -> 1
+# [CTRL] 1755000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1755000: PC=0021 IR=0000
+# 1755000: ADR=0021 MDR=0000 MEM_RD=xxxx
+# 1765000: MC STATE change 1 -> 2
+# [CTRL] 1765000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1765000: PC=0021 IR=0000
+# 1765000: ADR=0021 MDR=xxxx MEM_RD=xxxx
+# 1775000: MC STATE change 2 -> 3
+# [CTRL] 1775000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1775000: PC=0021 IR=0000
+# 1775000: ADR=xxxx MDR=xxxx MEM_RD=xxxx
+# 1785000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 1785000: MC STATE change 3 -> 5
+# [CTRL] 1785000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1785000: PC=0021 IR=0000
+# 1785000: ADR=0021 MDR=xxxx MEM_RD=xxxx
+# 1795000: MC STATE change 5 -> 0
+# [CTRL] 1795000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1795000: PC=0021 IR=0000
+# 1795000: ADR=0021 MDR=xxxx MEM_RD=xxxx
+# 1805000: MC STATE change 0 -> 8
+# 1805000: PC update (pwrite=1) old=0020 new=0021
+# [CTRL] 1805000 opcode=xxxx regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1805000: PC=0021 IR=xxxx
+# 1805000: ADR=0021 MDR=xxxx MEM_RD=xxxx
+# 1815000: MC STATE change 8 -> 1
+# [CTRL] 1815000 opcode=xxxx regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1815000: PC=0022 IR=xxxx
+# 1815000: ADR=0022 MDR=xxxx MEM_RD=xxxx
+# 1825000: MC STATE change 1 -> 0
+# [CTRL] 1825000 opcode=xxxx regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1825000: PC=0022 IR=xxxx
+# 1825000: ADR=0022 MDR=xxxx MEM_RD=xxxx
+# 1835000: MC STATE change 0 -> 8
+# 1835000: PC update (pwrite=1) old=0021 new=0022
+# [CTRL] 1835000 opcode=xxxx regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1835000: PC=0022 IR=xxxx
+# 1835000: ADR=0022 MDR=xxxx MEM_RD=xxxx
+# 1845000: MC STATE change 8 -> 1
+# [CTRL] 1845000 opcode=xxxx regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1845000: PC=0000 IR=xxxx
+# 1845000: ADR=0000 MDR=xxxx MEM_RD=8401
+# 1855000: MC STATE change 1 -> 0
+# [CTRL] 1855000 opcode=xxxx regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1855000: PC=0000 IR=xxxx
+# 1855000: ADR=0000 MDR=8401 MEM_RD=8401
+# 1865000: MC STATE change 0 -> 8
+# 1865000: PC update (pwrite=1) old=0022 new=0000
+# [CTRL] 1865000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1865000: PC=0000 IR=8401
+# 1865000: ADR=0000 MDR=8401 MEM_RD=8401
+# 1875000: MC STATE change 8 -> 1
+# [CTRL] 1875000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1875000: PC=0000 IR=8401
+# 1875000: ADR=0000 MDR=8401 MEM_RD=8401
+# 1885000: MC STATE change 1 -> 2
+# [CTRL] 1885000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1885000: PC=0000 IR=8401
+# 1885000: ADR=0000 MDR=8401 MEM_RD=8401
+# 1895000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 1895000: MC STATE change 2 -> 5
+# [CTRL] 1895000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1895000: PC=0000 IR=8401
+# 1895000: ADR=0000 MDR=8401 MEM_RD=8401
+# 1905000: MC STATE change 5 -> 0
+# [CTRL] 1905000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1905000: PC=0000 IR=8401
+# 1905000: ADR=0000 MDR=8401 MEM_RD=8401
+# 1915000: MC STATE change 0 -> 8
+# [CTRL] 1915000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1915000: PC=0000 IR=8401
+# 1915000: ADR=0000 MDR=8401 MEM_RD=8401
+# 1925000: MC STATE change 8 -> 1
+# [CTRL] 1925000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1925000: PC=0001 IR=8401
+# 1925000: ADR=0001 MDR=8401 MEM_RD=0064
+# 1935000: MC STATE change 1 -> 2
+# [CTRL] 1935000 opcode=1000 regwrite=0 regdest=0 alusrca=1 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1935000: PC=0001 IR=8401
+# 1935000: ADR=0001 MDR=0064 MEM_RD=0064
+# 1945000: WB regwrite=1 regdest=1 instr[11:9]=2 result=xxxx
+# 1945000: MC STATE change 2 -> 5
+# [CTRL] 1945000 opcode=1000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1945000: PC=0001 IR=8401
+# 1945000: ADR=0001 MDR=0064 MEM_RD=0064
+# 1955000: MC STATE change 5 -> 0
+# [CTRL] 1955000 opcode=1000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 1955000: PC=0001 IR=8401
+# 1955000: ADR=0001 MDR=0064 MEM_RD=0064
+# 1965000: MC STATE change 0 -> 8
+# 1965000: PC update (pwrite=1) old=0000 new=0001
+# [CTRL] 1965000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=1 iwrite=0
+# 1965000: PC=0001 IR=0064
+# 1965000: ADR=0001 MDR=0064 MEM_RD=0064
+# 1975000: MC STATE change 8 -> 1
+# [CTRL] 1975000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1975000: PC=0002 IR=0064
+# 1975000: ADR=0002 MDR=0064 MEM_RD=8404
+# 1985000: MC STATE change 1 -> 2
+# [CTRL] 1985000 opcode=0000 regwrite=0 regdest=0 alusrca=1 alusrcb=10 aluop=zz pwrite=0 iwrite=0
+# 1985000: PC=0002 IR=0064
+# 1985000: ADR=0002 MDR=8404 MEM_RD=8404
+# 1995000: MC STATE change 2 -> 3
+# [CTRL] 1995000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 1995000: PC=0002 IR=0064
+# 1995000: ADR=xxxx MDR=8404 MEM_RD=xxxx
+# 2005000: WB regwrite=1 regdest=1 instr[11:9]=0 result=xxxx
+# 2005000: MC STATE change 3 -> 5
+# [CTRL] 2005000 opcode=0000 regwrite=1 regdest=1 alusrca=0 alusrcb=00 aluop=zz pwrite=0 iwrite=0
+# 2005000: PC=0002 IR=0064
+# 2005000: ADR=0002 MDR=xxxx MEM_RD=8404
+# 2015000: MC STATE change 5 -> 0
+# [CTRL] 2015000 opcode=0000 regwrite=0 regdest=0 alusrca=0 alusrcb=01 aluop=zz pwrite=0 iwrite=1
+# 2015000: PC=0002 IR=0064
+# 2015000: ADR=0002 MDR=8404 MEM_RD=8404
+# [TB] Dumping memory 0..127:
+# mem[0] = 8401
+# mem[1] = 0064
+# mem[2] = 8404
+# mem[3] = c000
+# mem[4] = 0065
+# mem[5] = 8404
+# mem[6] = c000
+# mem[7] = 0066
+# mem[8] = 8404
+# mem[9] = c000
+# mem[10] = 0067
+# mem[11] = 8404
+# mem[12] = c000
+# mem[13] = 0068
+# mem[14] = 8404
+# mem[15] = c000
+# mem[16] = 0069
+# mem[17] = 8404
+# mem[18] = c000
+# mem[19] = 006a
+# mem[20] = 8404
+# mem[21] = c000
+# mem[22] = 006b
+# mem[23] = 8404
+# mem[24] = c000
+# mem[25] = 006c
+# mem[26] = 8404
+# mem[27] = c000
+# mem[28] = 006d
+# mem[29] = 8404
+# mem[30] = c000
+# mem[31] = 0000
+# mem[32] = 0000
+# mem[33] = xxxx
+# mem[34] = xxxx
+# mem[35] = xxxx
+# mem[36] = xxxx
+# mem[37] = xxxx
+# mem[38] = xxxx
+# mem[39] = xxxx
+# mem[40] = xxxx
+# mem[41] = xxxx
+# mem[42] = xxxx
+# mem[43] = xxxx
+# mem[44] = xxxx
+# mem[45] = xxxx
+# mem[46] = xxxx
+# mem[47] = xxxx
+# mem[48] = xxxx
+# mem[49] = xxxx
+# mem[50] = xxxx
+# mem[51] = xxxx
+# mem[52] = xxxx
+# mem[53] = xxxx
+# mem[54] = xxxx
+# mem[55] = xxxx
+# mem[56] = xxxx
+# mem[57] = xxxx
+# mem[58] = xxxx
+# mem[59] = xxxx
+# mem[60] = xxxx
+# mem[61] = xxxx
+# mem[62] = xxxx
+# mem[63] = xxxx
+# mem[64] = xxxx
+# mem[65] = xxxx
+# mem[66] = xxxx
+# mem[67] = xxxx
+# mem[68] = xxxx
+# mem[69] = xxxx
+# mem[70] = xxxx
+# mem[71] = xxxx
+# mem[72] = xxxx
+# mem[73] = xxxx
+# mem[74] = xxxx
+# mem[75] = xxxx
+# mem[76] = xxxx
+# mem[77] = xxxx
+# mem[78] = xxxx
+# mem[79] = xxxx
+# mem[80] = xxxx
+# mem[81] = xxxx
+# mem[82] = xxxx
+# mem[83] = xxxx
+# mem[84] = xxxx
+# mem[85] = xxxx
+# mem[86] = xxxx
+# mem[87] = xxxx
+# mem[88] = xxxx
+# mem[89] = xxxx
+# mem[90] = xxxx
+# mem[91] = xxxx
+# mem[92] = xxxx
+# mem[93] = xxxx
+# mem[94] = xxxx
+# mem[95] = xxxx
+# mem[96] = xxxx
+# mem[97] = xxxx
+# mem[98] = xxxx
+# mem[99] = xxxx
+# mem[100] = 0001
+# mem[101] = 0002
+# mem[102] = 0003
+# mem[103] = 0004
+# mem[104] = 0005
+# mem[105] = 0006
+# mem[106] = 0007
+# mem[107] = 0008
+# mem[108] = 0009
+# mem[109] = 000a
+# mem[110] = xxxx
+# mem[111] = xxxx
+# mem[112] = xxxx
+# mem[113] = xxxx
+# mem[114] = xxxx
+# mem[115] = xxxx
+# mem[116] = xxxx
+# mem[117] = xxxx
+# mem[118] = xxxx
+# mem[119] = xxxx
+# mem[120] = xxxx
+# mem[121] = xxxx
+# mem[122] = xxxx
+# mem[123] = xxxx
+# mem[124] = xxxx
+# mem[125] = xxxx
+# mem[126] = xxxx
+# mem[127] = xxxx
+# [TB] R0 (Accumulator) = xxxx
+# [TB] R1 = xxxx
+# [TB] R2 (Sum Result) = xxxx
+# [TB] R3 = xxxx
+# [TB] R4 = xxxx
+# [TB] MDR  = 8404
+# [TB] ALU ADR = 0002
+# [TB] MEM RD = 8404
+# [TB] Expected sum = 0037 (decimal 55)
+# [TB] FAIL: Sum incorrect
+# ** Note: $stop    : C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/tb_SystemTop.v(82)
+#    Time: 2020 ns  Iteration: 0  Instance: /tb_SystemTop
+# Break in Module tb_SystemTop at C:/Users/ASUS/Desktop/uniVersity/Semester5/CA/CA/CA3/CA3/tb_SystemTop.v line 82
